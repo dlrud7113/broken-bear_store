@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo/">
+    <title>망그러진 곰 : 굿즈샵</title>
+    <!-- jQuery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- fontawsom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+  </head>
+  <body>
+    <div class="side-menu-bg"></div>
+    <!-- <div class="head">
+      <div class="deviceFrame">
+        <div class="btnFrameDesktop">
+          <a href="#none">
+            <i class="xi-desktop xi-2x"></i>
+          </a>
+        </div>
+        <div class="btnFrameMobile">
+          <a href="#none">
+            <i class="xi-mobile xi-2x"></i>
+          </a>
+        </div>
+      </div>
+    </div> -->
+    <!-- 외부 콘텐츠 -->
+    <aside class="out-wrap">
+      <div class="wrapLeft" id="wrapLeft">  
+        <img src="images/logo/logo-removebg.png" alt="" class="big_logo" />
+        <img src="images/picture.png" alt=""  class="picture">
+        <img src="images/out_box.png" alt="" class="Q_box" />
+    </div>
+    <aside class="wrapRight" id="wrapRight">
+      <div class="question-wrap"> 
+        <img src="images/question.png" alt="문의팝업창글" >
+        <div id="question-btn01" class="question-btn">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="question-modal">
+      <div class="modal-title">
+        <div class="modal-logo">
+          <img src="images/modal/madal_logo.png" alt="모달로고">
+        </div>
+        <div class="modal-title-box">
+          <h3>유랑상점</h3>
+          <p>문의 시간 : 09:00~18:00</p>
+        </div>
+      </div>
+      <!-- 탭 버튼 -->
+      <ul class="modal-icons">
+        <li>
+          <a href="#tab1" class="tab-btn">
+            <i class="fa-solid fa-house"></i>
+            <h4>홈</h4>
+          </a>
+        </li>
+        <li>
+          <a href="#tab2" class="tab-btn" >
+            <i class="fa-regular fa-comment"></i>
+            <h4>언어</h4>
+          </a>
+        </li>
+        <li>
+          <a href="#tab3" class="tab-btn">
+            <i class="fa-solid fa-gear"></i>
+            <h4>설정</h4>
+          </a>
+        </li>
+      </ul>
+      <!-- 탭 콘텐츠  madal-home -->
+        <div class="modal-content">
+          <div id="tab1" class="tab-content">
+            <div class="modal-top">
+              <div class="talk-logo">
+                <img src="images/modal/talk_logo.png" alt="">
+              </div>
+              <div class="talk-desc">
+                <p>
+                  <span>유랑상점</span><br>
+                  안녕하세요. <br>
+                  망그러진 곰 굿즈샵에 오신걸 <br>
+                  환영합니다. <br><br>
+                  무엇을 도와드릴까요?
+                </p>
+              </div>
+            </div>
+            <button class="modal-content-btn">
+              문의하기 <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </div>
+          <div id="tab2" class="tab-content">
+            <div class="madal-talk-content">
+            <img src="images/modal/talk_big.png" alt="">
+            <p>상담사와 대화가 가능합니다.</p>
+          </div>
+            <button class="modal-content-btn">실시간으로 문의하기
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </div>
+          <div id="tab3" class="tab-content">
+            <table class="setting-top">
+              <h3>상담환경</h3>
+              <tr>
+                <th><img src="images/modal/언어.svg" alt=""></td>
+                <td>언어</td>
+                <td>
+                <select name="lang" id="">
+                <option value="ko">한국어</option>
+                <option value="en">영어</option>
+                <option value="ch">중국어</option>
+                </select></td>
+              </tr>
+              <tr>
+                <th><img src="images/modal/번역.svg" alt=""></td>
+                <td>메세지 번역 표시</td>
+                <td>
+                  <fieldset>
+                    <label>
+                      <input role="switch" type="checkbox" />
+                    </label>
+                  </fieldset>
+                </td>
+              </tr>
+              <tr>
+                <th><img src="images/modal/알람.svg" alt=""></td>
+                <td>알람음</td>
+                <td>
+                  <fieldset>
+                  <label>
+                    <input role="switch" type="checkbox" />
+                  </label>
+                </fieldset></td>
+              </tr>
+            </table>
+            <table class="setting-bottom">
+              <h3>광고 수신 설정</h3>
+              <tr>
+                <th><img src="images/modal/문자거부.svg" alt=""></td>
+                <td>문자 수신거부</td>
+                <td>
+                  <fieldset>
+                    <label>
+                      <input role="switch" type="checkbox" />
+                    </label>
+                  </fieldset>
+                </td>
+              </tr>
+              <tr>
+                <th><img src="images/modal/이메일거부.svg" alt=""></td>
+                <td>이메일 수신거부</td>
+                <td>
+                  <fieldset>
+                    <label>
+                      <input role="switch" type="checkbox" />
+                    </label>
+                  </fieldset>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </aside>
+  </aside>
+      <div class="wrap" id="wrap">
+        <!-- sideMenu --> 
+        <div class="side-menu">
+          <div class="side-menu-wrap">
+            <div class="side-menu-heading">
+              <h2 class="side-menu-heading-title">
+                <a href="#none"></a>
+                <a href="#none">
+                  <i class="xi-close-min xi-2x"></i></a>
+              </h2>
+              <div class="side-menu-heading-sub">
+              <h3><a href="#none"></a></h3>
+              <h3><a href="#none"><i class="xi-angle-right-min"></i></a></h3>
+              </div>
+            </div>
+            <div class="side-menu-cate">
+              <h3><i class="xi-apps"></i>전체 카테고리</h3>
+              <div class="side-category">
+                <div><a href="#none">오늘의 상품</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+                <div><a href="#none">문구류</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+                <div><a href="#none">키링</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+                <div><a href="#none">봉제인형</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+                <div><a href="#none">폰케이스</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+                <div><a href="#none">마우스패드</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+                <div><a href="#none">파자마</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+                <div><a href="#none">잡화</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+              </div>
+            </div>
+            <div class="side-menu-service">
+              <h3><i class="xi-spa"></i>주요서비스</h3>
+              <div><a href="#none">배송안내</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+              <div><a href="#none">리뷰작성</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+              <div><a href="#none">이벤트</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+              <div><a href="#none">멤버십</a><a href="#none"> <i class="xi-angle-right-min"></i></a></div>
+            </div>
+            <div class="side-menu-banner">
+              <div class="chatbot"><a href="#none"><i class="xi-message-o xi-2x"></i> 챗봇상담</a></div>
+              <div class="customer-center"><a href="#none"><i class="xi-call xi-2x"></i> 고객센터</a></div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- container -->
+        <div class="container" id="container">
+          <!-- 회원가입시 쿠폰증정 -->
+          <div class="top-banner">
+            <div class="topEvent">
+              <a href="#none">
+                <p>
+                  지금 회원가입시
+                  <span style="color: var(--primary)">2,000원</span> 깜짝 쿠폰 증정 ✨
+                  <i class="xi-angle-right-min"></i>
+                </p>
+              </a>
+            </div>
+          </div>
+          <!-- contentBox -->
+          <div class="contentBox">
+          <!-- menuHeader -->
+          <div class="menuHeader">
+              <div class="menuHeader01">
+                <i class="xi-bars xi-2x"></i>
+                <a href="#">
+                  <img
+                  src="images/logo/logo-removebg.png"
+                  alt=""
+                  class="logo"
+                />
+                </a>
+                <div class="menuHeader-right">
+                  <a href="#none"> <i class="xi-search xi-2x"></i></a>
+                  <a href="#none"><i class="xi-cart-o xi-2x"></i></a>
+                </div>
+              </div>
+              <div class="menuHeader02">
+                <ul class="menuHeader02-list">
+                  <li><a href="#none">오늘의 추천</a></li>
+                  <li><a href="#none">상품</a></li>
+                  <li><a href="#none">배송안내</a></li>
+                  <li><a href="#none">이벤트</a></li>
+                  <li><a href="#none">리뷰</a></li>
+                </ul>
+              </div>
+          </div>
+          <!-- mainVisual -->
+          <div class="mainVisual">
+              <div class="swiper-container first-swiper swiper">
+                <ul class="mainVisual-slider swiper-wrapper">
+                  <li class="swiper-slide">
+                    <a href="#none"
+                      ><img src="images/mainVisual/banner01.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#none"
+                      ><img src="images/mainVisual/banner02.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#none"
+                      ><img src="images/mainVisual/banner03.png" alt=""
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#none"
+                      ><img src="images/mainVisual/banner04.png" alt=""
+                    /></a>
+                  </li>
+                </ul>
+                <div class="swiper-pagination01"></div>
+              </div>
+          </div>
+          <!-- cateList -->
+          <div class="cateList">
+              <ul class="cateList-list">
+                <li>
+                  <a href="#none">
+                    <span
+                      ><img src="images/quickIcon/icon01.png" alt=""
+                    /></span>
+                    <p>추천상품</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span
+                      ><img src="images/quickIcon/icon02.png" alt=""
+                    /></span>
+                    <p>배송안내</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span
+                      ><img src="images/quickIcon/icon03.png" alt=""
+                    /></span>
+                    <p>On Sale</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span
+                      ><img src="images/quickIcon/icon04.png" alt=""
+                    /></span>
+                    <p>문구류</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span
+                      ><img src="images/quickIcon/icon05.png" alt=""
+                    /></span>
+                    <p>봉제인형</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#none">
+                    <span
+                      ><img src="images/quickIcon/icon06.png" alt=""
+                    /></span>
+                    <p>잡화</p>
+                  </a>
+                </li>
+              </ul>
+          </div>
+            <!-- 강력추천상품 -->
+            <section class="recommendation">
+              <div class="title">
+                <p>망그러진 곰의 
+                  <span style="color:lightblue">Best 상품!</span></p>
+                <a href="#none" class="allproduct">전체보기<i class="xi-angle-right-min"></i></a>
+              </div>
+              <div class="subTitle">
+                <p>봄바람과 함께 망그러진 곰의 베스트상품을 만나보세요!</p>
+              </div>
+              <div class="boxWrap swiper-container second-swiper swiper">
+                <ul class="rec-best swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="box">
+                      <div class="tumbnail">
+                        <a href="#none"
+                          ><img src="images/best/best_01.jpg" alt=""
+                        /></a>
+                      </div>
+                      <div class="description">
+                        <div class="name">
+                          <a href="#none">망그러진 곰 콧물 그립톡</a>
+                          <p>14,800원</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="box">
+                      <div class="tumbnail">
+                        <a href="#none"
+                          ><img src="images/best/best_02.jpg" alt=""
+                        /></a>
+                      </div>
+                      <div class="description">
+                        <div class="name">
+                          <a href="#none">망그러진 곰 클리어 스티커 나는 말하는 감자</a>
+                          <p>3,000원</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="box">
+                      <div class="tumbnail">
+                        <a href="#none"
+                          ><img src="images/best/best_03.jpg" alt=""
+                        /></a>
+                      </div>
+                      <div class="description">
+                        <div class="name">
+                          <a href="#none">감자 망그러진곰 키링 인형 울먹</a>
+                          <p>15,000원</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="box">
+                      <div class="tumbnail">
+                        <a href="#none"
+                          ><img src="images/best/best_04.jpg" alt=""
+                        /></a>
+                      </div>
+                      <div class="description">
+                        <div class="name">
+                          <a href="#none">망그러진곰 캐릭터 스티커 아기 망그러진 곰의 하루</a>
+                          <p>3,000원</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+            </section>
+            <!-- 슬라이드 배너 -->
+            <section class="banner">
+              <div class="third-swiper swiper">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <a href="#none"
+                      ><img src="images/banner/event01.png" alt="event01"
+                    /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href="#none"
+                      ><img src="images/banner/event02.png" alt="event02"
+                    /></a>
+                  </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+            </section>
+            <!-- 카테고리 -->
+            <section class="kategorie-menu">
+              <div class="kategorie-menu-heading">
+                <h3><span>카테고리별</span> 상품 모아보기</h3>
+                <div class="swiper-pagination3">  
+                </div>
+              </div>
+              <div class="swiper-container fourth-swiper swiper">
+                <ul class="prod-ul swiper-wrapper">
+                  <li class="swiper-slide">
+                    <div class="main-prod">
+                      <a href="#none">
+                        <img src="images/doll/doll_main.PNG" alt="" />
+                      </a>
+                      <a href="#none">
+                        <h4>아담한 사이즈로 새로나온 망그러진 곰 인형</h4>
+                        <h2>귀여운 봉제 인형</h2>
+                        <p>
+                          온라인 한정 이벤트로 키링 인형 구매시 곰등록증 1매, 증명사진 1매(랜덤증정)도 함께 드려요!
+                        </p>
+                      </a>
+                    </div>
+                    <div class="prod-list-wrap">
+                      <ul class="prod-list">
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/doll/doll_01.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="b-tag">Best</span> 
+                                <p>
+                                망그러진 곰 햄터 담요</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        15,900</span>원</p>
+                                      <span class="star">평점 5 | 리뷰 1,024</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/doll/doll_02.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="b-tag">Best</span> 
+                                <p>
+                                아기 망그러진 곰 키링 인형 10cm</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        <del>16,000</del>
+                                        13,000</span>원</p>
+                                      <span class="star">평점 4.9 | 리뷰 2,066</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/doll/doll_03.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <!-- <span class="b-tag">Best</span>  -->
+                                <p>
+                                감자 망그러진 곰 키링인형</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        15,000</span>원</p>
+                                      <span class="star">평점 5 | 리뷰 651</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/doll/doll_04.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="n-tag">new</span> 
+                                <p>
+                                아기 망그러진 곰 20cm</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        23,000</span>원</p>
+                                      <span class="star">평점 5 | 리뷰 594</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/doll/doll_05.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="b-tag">Best</span> 
+                                <p>
+                                망그러진 곰 휴대용 다용도 사각수납 파우치</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        16,000</span>원</p>
+                                      <span class="star">평점 5 | 리뷰 453</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/doll/doll_06.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="b-tag">Best</span> 
+                                <p>
+                                망그러진 곰 키링 인형 기본</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        15,000</span>원</p>
+                                      <span class="star">평점 5 | 리뷰 662</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/doll/doll_07.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="b-tag">Best</span> 
+                                <p>
+                                망그러진 곰 울보 얼굴 쿠션</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        36,000</span>원</p>
+                                      <span class="star">평점 5 | 리뷰322</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <button><a href="#none"><i class="xi-cart-o"></i>상품 한번에 담기</button>
+                  </li>
+                  <!-- 슬라이드 반복 -->
+                  <li class="swiper-slide">
+                    <div class="main-prod">
+                      <a href="#none">
+                        <img src="images/doll/doll_main.PNG" alt="" />
+                      </a>
+                      <a href="#none">
+                        <h4></h4>
+                        <h2>폰케이스 & 키링</h2>
+                        <p>
+                          망그러진 곰이 그려진 핸드폰케이스와 에어팟케이스와 함께 일상생활을 함께하세요!
+                        </p>
+                      </a>
+                    </div>
+                    <div class="prod-list-wrap">
+                      <ul class="prod-list">
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/degital/degital_01.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="n-tag">new</span> 
+                                <p>
+                                폰케이스 뮤직 망그러진 곰</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        <b>18%</b> <del>16,000원</del>
+                                        13,000</span>원</p>
+                                      <span class="star">평점 5 | 리뷰 150</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/degital/degital_02.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="b-tag">Best</span> 
+                                <p>
+                                폰케이스 울보 망그러진 곰</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        <b>9%</b>
+                                        <del>15,000</del>
+                                        16,500</span>원</p>
+                                      <span class="star">평점 4.9 | 리뷰 2,066</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/degital/degital_03.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <!-- <span class="b-tag">Best</span>  -->
+                                <p>
+                                폰케이스 빵집 햄스터 망그러진 곰</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        16,000</span>원</p>
+                                      <span class="star">평점 5 | 리뷰 117</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/degital/degital_04.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="b-tag">Best</span> 
+                                <p>
+                                폰케이스 힙합 망그러진 햄스터</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        15,000</span>원</p>
+                                      <span class="star">평점 5 | 리뷰 594</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <!-- soldOut -->
+                              <div class="thum-img" id="sold">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img 
+                                    src="images/degital/degital_05.jpg"
+                                    alt=""
+                                    
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="s-tag">soldout</span> 
+                                <p>
+                                폰케이스 하트 반짝이 벚꽃 망그러진 곰</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        16,000</span>원</p>
+                                      <span class="star">평점 5 | 리뷰 453</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/degital/degital_06.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <p>
+                                  에어팟 케이스 망그러진 곰 I♡U </p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        12,000</span>원</p>
+                                      <span class="star">평점 5 | 리뷰 662</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <button><a href="#none"><i class="xi-cart-o">                     
+                    </i>상품 한번에 담기</button>
+                  </li>
+                  <li class="swiper-slide">
+                    <div class="main-prod">
+                      <a href="#none">
+                        <img src="images/doll/doll_main.PNG" alt="" />
+                      </a>
+                      <a href="#none">
+                        <h4></h4>
+                        <h2>망곰 키즈 파자마</h2>
+                        <p>
+                          <span>망그러진 곰 & 스파오 콜라보</span><br>
+                          우리아이를 위한 망그러진 곰이 그려진 키즈 파자마 페스티벌!
+                        </p>
+                      </a>
+                    </div>
+                    <div class="prod-list-wrap">
+                      <ul class="prod-list">
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/pajama/pajama_05.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="n-tag">New</span> 
+                                <p>
+                                망곰 콜라보 반팔 파자마 (브라운)</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">35,000</span>원</p>
+                                      <span class="star">평점 5.0 | 리뷰 250</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/pajama/pajama_07.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="n-tag">New</span> 
+                                <p>
+                                  망곰 콜라보 반팔 파자마 (블루)</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        35,000</span>원</p>
+                                      <span class="star">평점 5.0 | 리뷰 956</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/pajama/pajama_10.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="n-tag">New</span> 
+                                <p>
+                                  망곰 콜라보 반팔 파자마 (네이비)</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        35,000</span>원</p>
+                                      <span class="star">평점 5.0 | 리뷰 956</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <div class="thum-img">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img
+                                    src="images/pajama/pajama_09.jpg"
+                                    alt=""
+                                  />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="n-tag">New</span> 
+                                <p>
+                                  망곰 콜라보 반팔 파자마 (핑크)</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        35,000</span>원</p>
+                                      <span class="star">평점 5.0 | 리뷰 956</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <div class="prod-list-line">
+                              <!-- soldOut -->
+                              <div class="thum-img" id="sold">
+                                <label class="check">
+                                  <input type="checkbox" checked="checked" />
+                                  <img 
+                                    src="images/pajama/pajama_08.jpg"
+                                    alt="" />
+                                </label>
+                              </div>
+                              <div class="prod-info">
+                                <span class="s-tag">soldout</span> 
+                                <p>
+                                  망곰 콜라보 긴팔 파자마 (네이비)</p>
+                                <div class="prod-price">
+                                  <div>
+                                    <p>
+                                      <span style="font-weight: 600">
+                                        35,000</span>원</p>
+                                      <span class="star">평점 5.0 | 리뷰 956</span>
+                                    </div>
+                                    <i class="fa-regular fa-heart"></i>
+                                  </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <button><a href="#none"><i class="xi-cart-o"></i>상품 한번에 담기</button>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- 파자마기획상품 -->
+            <section class="pajama">
+              <div class="title">
+                <p>망그러진 곰 
+                  <span style="color:lightblue">키즈 파자마</span></p>
+                <a href="#none" class="allproduct">전체보기<i class="xi-angle-right-min"></i></a>
+              </div>
+              <div class="subTitle">
+                <p>다가오는 여름 시원한 쿨링 키즈파자마를 만나보세요!</p>
+              </div>
+              <div class="pajama-content">
+                <div class="pajama-big">
+                  <a href="">
+                    <img src="images/pajama/pajama_03.jpg" alt="" width="300px">
+                  </a>
+                </div>
+                <div class="pajama-mini">
+                  <a href=""><img src="images/pajama/pajama_06.jpg" alt=""></a>
+                  <a href=""><img src="images/pajama/pajama_07.jpg" alt=""></a>
+                  <a href=""><img src="images/pajama/pajama_10.jpg" alt=""></a>
+                </div>
+                
+              </div>
+            </section>
+            <!--  잡화상품 -->
+            <section class="on-sale">
+              <div class="on-sale-heading">
+                <div class="title">
+                  <p>망그러진 곰  
+                    <span style="color:lightblue"> 잡화 문구류</span></p>
+                </div>
+                <a href="#none" class="allproduct">전체보기<i class="xi-angle-right-min"></i></a>
+              </div>
+              <div class="swiper-pagination4"></div>
+              <div class="swiper-container fifth-swiper swiper">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_01.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진 곰 햄터 하트 떡메모지</h5>
+                      <p><span style="font-weight: 700;">2,300</span>원</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_02.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진 아기망곰 마스킹테이프</h5>
+                      <p><span style="font-weight: 700;">5,000</span>원</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_03.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진 곰 데코 스티커 팩 꼬질망곰</h5>
+                      <p><span style="font-weight: 700;">22,300</span>원</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_04.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진 곰 하늘 떡메모지 학생</h5>
+                      <p><span style="font-weight: 700;">2,500</span>원</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_05.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진 곰 귀여운 캐릭터 자유형 </h5>
+                      <p><span style="font-weight: 700;">5,500</span>원</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_06.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진 곰 캐릭터 스티커 왠지 잘될것 같은 내 인생</h5>
+                      <p><span style="font-weight: 700;">2,500</span>원</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_07.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진 곰 데코 스티커 팩 감자 망곰</h5>
+                      <p><span style="font-weight: 700;">16,830</span>원</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_08.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진 햄스터 떡 메모지</h5>
+                      <p><span style="font-weight: 700;">4,000</span>원</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_09.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진 곰 플래너 다이어리 만년형</h5>
+                      <p><span style="font-weight: 700;">9,000</span>원</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_10.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진곰 얼굴 마우스패드</h5>
+                      <p><span style="font-weight: 700;">7,000</span>원</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_11.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진 햄스터 그립톡</h5>
+                      <p><span style="font-weight: 700;">12,300</span>원</p>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="images/stationery/문구_12.jpg" alt="">
+                    <div class="on-sale-txt">
+                      <h5>망그러진 햄스터 꼬질 키링</h5>
+                      <p><span style="font-weight: 700;">9,300</span>원</p>
+                    </div>
+                </ul>
+            </section>
+            <a class="top-btn">
+              TOP
+            </a>
+            <!-- footer -->
+            <footer>
+              <div class="footer-menu">
+                <a href="">고객센터</a>
+                <a href="">고객센터</a>
+                <a href="">배송문의</a>
+                <a href="">리뷰작성</a>
+              </div>
+              <div class="footer">
+                <h3>(주)망그러진곰 </h3>
+                <p>
+                  대표이사 최수연/경기도 성남시 분당구 정자일로 95<br>
+                  사업자등록번호 220-81-62517/통신판매업신고번호 2006-경기성남-0692호
+                  <br>
+                  전화 1588-3819 / 070-7549-6262 /이메일 helpcustomer@naver.com<br>
+                  Copyright 2021. The Chorocmaeul Co., Ltd.
+                </p>
+              </div>
+              <div class="footer-etc">
+                <a href="#none">이용약관</a>
+                <a href="#none">개인정보처리방침</a>
+                <a href="#none">이메일주소무단수집금지</a>
+                <a href="#none">사업자정보확인</a>
+              </div>
+            </footer>
+            <!-- 하단 네비게이션 -->
+          <div class="under-nav">
+            <ul>
+              <li class="home"><a href="#none"><i class="xi-home-o xi-3x"></i></a></li>
+              <li class="category"><a href="#none"><i class="xi-bars xi-3x"></i></a></li>
+              <li class="search"><a href="#none"><i class="xi-search xi-3x"></i></a></li>
+              <li class="in-my-cart"><a href="#none"><i class="xi-basket xi-3x"></i></a></li>
+              <li class="my"><a href="#none"><i class="xi-user-o xi-3x"></i></a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="js/under_nav.js"></script>
+    <script src="js/side_menu.js"></script>
+    <script src="js/side_menu2.js"></script>
+    <script src="js/modal.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="js/mainVisual.js"></script>
+    <script src="js/recommendation.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/today_menu.js"></script>
+    <script src="js/on_sale.js"></script>
+  </body>
+</html>
